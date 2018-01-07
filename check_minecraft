@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TEST=$(ps -aux | grep -m 1 "java")
+TEST=$(ps -aux | grep "java")
 PID=$(pidof java)
 
 main ()
