@@ -1,15 +1,14 @@
 #!/bin/bash
 
 TEST=$(ps -aux | grep -m 1 "java")
-
-
+PID=$(pidof java)
 
 main ()
         {
 
         if [[ $TEST = *minecraft* ]]
         then
-                echo "Minecraft server is online."
+                echo "Minecraft server is online, PID: $PID"
                 exit 0
         else
                 echo "Minecraft server is offline."
